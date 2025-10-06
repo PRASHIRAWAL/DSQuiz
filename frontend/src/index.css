@@ -1,0 +1,17 @@
+:root {
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --background-color: #f0f4f8; /* Soft blue-gray */
+  --card-background-color: #ffffff;
+  --input-background-color: #ffffff;
+  --primary-color: #4285f4; /* Vibrant blue */
+  --primary-color-hover: #357ae8;
+  --text-color: #333333;
+  --border-color: #d1d5db;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+}

@@ -1,0 +1,462 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* ... (keep your other styles like .card, .form-group, etc.) ... */
+
+/* Full Page Dashboard Layout */
+.dashboard-layout {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color);
+}
+
+.sidebar {
+  width: 260px; /* A bit wider */
+  background-color: var(--card-background-color);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border-color);
+  box-shadow: 2px 0px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.sidebar-logo {
+  color: var(--primary-color);
+  margin: 0.5rem 0 3rem 0;
+  padding-left: 0.5rem;
+  text-align: left;
+  font-size: 1.8rem;
+}
+
+.sidebar-nav a {
+  display: flex; /* For icon alignment later */
+  align-items: center;
+  gap: 0.75rem;
+  color: #9ca3af; /* Softer text color */
+  text-decoration: none;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar-nav a:hover {
+  background-color: var(--input-background-color);
+  color: var(--text-color);
+}
+
+.sidebar-nav a.active {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+}
+
+.logout-btn-sidebar {
+  margin-top: auto; /* Pushes logout to the bottom */
+  width: 100%;
+  padding: 0.85rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--input-background-color) !important;
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logout-btn-sidebar:hover {
+  background-color: #4b5563 !important;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 2rem 3rem;
+  overflow-y: auto;
+}
+
+.main-content h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Card for Login/Register/User Dashboard */
+.card {
+  background-color: var(--card-background-color);
+  padding: 2.5rem 3rem;
+  border-radius: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.tagline {
+  margin-bottom: 2.5rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--input-background-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Quiz List on User Dashboard */
+.quiz-list {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.quiz-item {
+  background-color: var(--input-background-color);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.quiz-item h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.quiz-item p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+.start-quiz-btn {
+  margin-top: 1rem !important;
+  width: auto !important;
+  padding: 0.5rem 1rem !important;
+  font-size: 0.9rem !important;
+}
+
+/* Question Editor on Admin Dashboard */
+.question-editor {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
+}
+
+.question-editor h4 {
+  margin-top: 0;
+}
+
+.add-btn, .remove-btn, .logout-btn {
+  background-color: #6c757d !important;
+  margin-top: 1rem !important;
+}
+
+.add-btn:hover, .remove-btn:hover, .logout-btn:hover {
+  background-color: #5a6268 !important;
+}
+
+.remove-btn {
+  width: auto !important;
+  padding: 0.5rem 1rem !important;
+  font-size: 0.9rem !important;
+}
+/* ... (all your other styles) ... */
+
+.quiz-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-btn {
+  width: auto !important;
+  padding: 0.5rem 1rem !important;
+  font-size: 0.9rem !important;
+}
+
+/* Modal Styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: var(--card-background-color);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+/* ... (all your other styles) ... */
+
+.modal-content h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.modal-content hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 2rem 0;
+}
+
+.modal-content textarea {
+  width: 100%;
+  padding: 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--input-background-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cancel-btn {
+  background-color: #6c757d !important;
+}
+.cancel-btn:hover {
+  background-color: #5a6268 !important;
+}
+
+/* ... (all your other styles) ... */
+
+.quiz-player-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.question-text {
+  font-size: 1.5rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.option-btn {
+  text-align: left !important;
+  background-color: var(--input-background-color) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+  padding: 1rem !important;
+  font-size: 1rem !important;
+  width: 100% !important;
+}
+
+.option-btn.selected {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  border-color: var(--primary-color) !important;
+}
+
+.next-finish-btn {
+  width: auto !important;
+  padding: 0.8rem 2rem !important;
+}
+/* ... (all your other styles) ... */
+
+.submissions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+.submissions-table th, .submissions-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.submissions-table th {
+  font-weight: 600;
+}
+
+.submissions-table tbody tr:hover {
+  background-color: var(--input-background-color);
+}
+/* ... (all your other styles) ... */
+
+.leaderboard-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--card-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.leaderboard-item .rank {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-right: 1.5rem;
+}
+
+.leaderboard-item .username {
+  flex-grow: 1;
+  font-weight: 500;
+}
+
+.leaderboard-item .score {
+  font-weight: bold;
+}
+/* ... (all your other styles) ... */
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.timer {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  background-color: var(--input-background-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+/* ... (all your other styles) ... */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-link {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.stat-item p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.achievements-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.achievement-badge {
+  background-color: var(--input-background-color);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+/* ... (all your other styles) ... */
+
+.chart-container {
+  background-color: var(--card-background-color);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
